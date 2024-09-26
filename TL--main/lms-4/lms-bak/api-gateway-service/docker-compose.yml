@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  api-gateway:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "9002:8000"
+    networks:
+      - laravel_network
+    depends_on:
+      - database-service
+
+networks:
+  laravel_network:
+    driver: bridge

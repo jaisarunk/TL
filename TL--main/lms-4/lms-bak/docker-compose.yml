@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  database-service:
+    build:
+      context: ./database-service
+      dockerfile: Dockerfile
+    ports:
+      - "9001:8000"
+    networks:
+      - laravel_network
+
+  api-gateway-service:
+    build:
+      context: ./api-gateway-service
+      dockerfile: Dockerfile
+    ports:
+      - "9002:8000"
+    depends_on:
+      - database-service
+    networks:
+      - laravel_network
+
+  crud-service:
+    build:
+      context: ./crud-service
+      dockerfile: Dockerfile
+    ports:
+      - "9003:8000"
+    depends_on:
+      - api-gateway-service
+    networks:
+      - laravel_network
+
+networks:
+  laravel_network:
+    driver: bridge

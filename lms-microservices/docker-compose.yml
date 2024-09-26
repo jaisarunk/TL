@@ -1,0 +1,70 @@
+version: '3.8'
+
+services:
+  mysql-db:
+    image: mysql:8.0
+    container_name: mysql-db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: laravel_microservice
+      MYSQL_USER: root
+      MYSQL_PASSWORD: 
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  auth-service:
+    build:
+      context: ./auth-service
+      dockerfile: Dockerfile
+    container_name: auth-service
+    restart: always
+    depends_on:
+      - mysql-db
+    ports:
+      - "8001:8001"
+    environment:
+      DB_CONNECTION: mysql
+      DB_HOST: mysql-db
+      DB_PORT: 3306
+      DB_DATABASE: laravel_microservice
+      DB_USERNAME: root
+      DB_PASSWORD: 
+    volumes:
+      - ./auth-microservice:/var/www
+    #extra_hosts:
+      #- "host.docker.internal:host-gateway"
+    networks:
+      - laravel_network
+
+  crud-service:
+    build:
+      context: ./crud-service
+      dockerfile: Dockerfile
+    container_name: crud-service
+    restart: always
+    depends_on:
+      - mysql-db
+    ports:
+      - "8002:8002"
+    environment:
+      DB_CONNECTION: mysql
+      DB_HOST: mysql-db
+      DB_PORT: 3306
+      DB_DATABASE: laravel_microservice
+      DB_USERNAME: root
+      DB_PASSWORD: 
+    volumes:
+      - ./crud-microservice:/var/www
+    networks:
+      - laravel_network
+
+networks:
+  laravel_network:
+    driver: bridge
+
+volumes:
+  mysql_data:
+    driver: local

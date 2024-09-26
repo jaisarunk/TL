@@ -1,0 +1,396 @@
+{
+	"info": {
+		"_postman_id": "3adcf084-a967-4d24-a5e5-cb85a6610c30",
+		"name": "lms-microservices",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10135222"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8001/api/login?email=aman@gmail.com&password=12345678",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8001/api/login?email=aman@gmail.com&password=12345678",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "aman@gmail.com"
+						},
+						{
+							"key": "password",
+							"value": "12345678"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8002/api/getWeatherReport",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8002/api/getWeatherReport",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8002",
+					"path": [
+						"api",
+						"getWeatherReport"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8001/api/add",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNmY2ZWMwOGQzMTQ0ZWE4ZGM5OWQ0N2FhOWY1Y2I5MzRiOTc3NTBhY2QxYzJmYjNmZTA3ZDljOTAxZWI2NTM3ZGRjOGZjZTg2ZGEwNGVmMGEiLCJpYXQiOjE3MjczMzQ4ODQuNTI2NTQ0LCJuYmYiOjE3MjczMzQ4ODQuNTI2NTU0LCJleHAiOjE3NTg4NzA4ODQuNDc2MjIyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Q7IaP4kRsBEilcGRiAbjcKXTxp_ezAOF6tx3myglP5JmofgZMYoXusGsyW6dAoDa46WllIWwgHHpSHhIl5O1FSwbCMJAN3EyhMKcR3_xfNHc4AO9gAUVd_txnJYDDQXlmnUg7LlEwHNWiyd03_pybkgzG4FbCAvjmeahIpXmZOsLbv6-WDJOTwbtA1WqL1rZ2LwpePekEkEIcsXgHkEszZtRvJro46zh_hHZqY_X5QZ3xrwaH9HnB7D7VCQsTzYUVlR8QlJOPJyt7dL1q4aGOyvGDlko56hV5EVxzEj7fayaQs4T8uAt_ry_Nsrdg30Gmv-69m16jP5gc3jI25apWZpJyaeeMOGw7VnIuCjsTQBNWwn1wAx2mIlFB05X4s6_wgSmJ_RlicPP6Xi6qc8U0I2Lig2U5m4aOfL8fOCGrOy-f-WqnAZmEkQqzcB8siXqQ3SlYWW4J7nmaPO2BkolxSIcymjFzf5sYZEhzeSh9-QuTdd1Dry5fh6kKbwdWo95iSU9QPu36QHQKJrZ9a9NN6sbITYlwosS6S4FVpMxmm_c6Kl92s_SmfcVo5owH80UOH0wYZ34EpSzKuDjVIFHAIXKHYHvJ5XUwnRpx8-gR_zvBSJM2oWOWXDhKWGA4e2qGr5RKDLtqMTD_2cQPiVKvmO7DgenQU_MbYGPXyL1j78",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNTc2MWE1MDkxYTIzMDhlYTljNDQ4NmEzNGZkZDlmOTFkYzI1MDk1NjEwYzFjZTZmNTg1ZWNlODk3N2UxMDU2ODI5ZGU1ZDM5NGI1MTYzNDgiLCJpYXQiOjE3MjczMjg1ODguNzM0NjM3LCJuYmYiOjE3MjczMjg1ODguNzM0NjQ1LCJleHAiOjE3NTg4NjQ1ODguNzIwNzk1LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.iqxMLbyxX-crKOLVb7-W1u_GOIPCQhlIWuJCDDCx-24VMvFnTs4AENJcOSwHt9MSHueSAwdJa6Vd9a-Ngk93wrqNYasud0Z6QnfuViMq7VGB0ypMIBi0FMFe-oRZe9husTv_Hi7UZ2kxD2GhbfJgX8VPWBmxuwURzDMqzqVl7vY6k7-dEBPwN5yt9YBNRDb8WpRUhzc-MGU2don8RoSzMHWS2HOAAk6DK2JE3CTnipthzrvUBrzQmQxOBOURgLyZmLdym_paYMmqj6vEZpfzV3SBrM9DCGBE_TyG20quvX3ztMhIrKz8MeSsLZlCwpDDUtr5Xm2qhrbVFZyFYRJuQ_xsjPtu1DUN4yFhqbkjoq3wo8AIB6Nema5rZWO5igAWZicosfkafnf_RMgvsK9NVdnI2X65TD3Lq4khaHLqeyUFIK8GDjOV1ALg_aWZUqVgQyDe8R4MYc113NYQ33sHghlXquLzDqVqd1oDJzOTB8RVy8AdLmEtiaQJURafi2ZZAzN0cSVnBNk5KOq2sQnoq7P4DpIWMf-6gf1NL0wEvTvZL8ZajvgcdHhoMMpH0Ip_f3NcjQ4qORCrzT7jCChhXfha_DOG9jZohP59DECAPBgxrdfOw5qG4X_F6NjRi88_ayMdVkXcepos_UXeT8hawJE7SpJBZKtk4gw1lzzVUDg",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8001/api/add",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"add"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNmY2ZWMwOGQzMTQ0ZWE4ZGM5OWQ0N2FhOWY1Y2I5MzRiOTc3NTBhY2QxYzJmYjNmZTA3ZDljOTAxZWI2NTM3ZGRjOGZjZTg2ZGEwNGVmMGEiLCJpYXQiOjE3MjczMzQ4ODQuNTI2NTQ0LCJuYmYiOjE3MjczMzQ4ODQuNTI2NTU0LCJleHAiOjE3NTg4NzA4ODQuNDc2MjIyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Q7IaP4kRsBEilcGRiAbjcKXTxp_ezAOF6tx3myglP5JmofgZMYoXusGsyW6dAoDa46WllIWwgHHpSHhIl5O1FSwbCMJAN3EyhMKcR3_xfNHc4AO9gAUVd_txnJYDDQXlmnUg7LlEwHNWiyd03_pybkgzG4FbCAvjmeahIpXmZOsLbv6-WDJOTwbtA1WqL1rZ2LwpePekEkEIcsXgHkEszZtRvJro46zh_hHZqY_X5QZ3xrwaH9HnB7D7VCQsTzYUVlR8QlJOPJyt7dL1q4aGOyvGDlko56hV5EVxzEj7fayaQs4T8uAt_ry_Nsrdg30Gmv-69m16jP5gc3jI25apWZpJyaeeMOGw7VnIuCjsTQBNWwn1wAx2mIlFB05X4s6_wgSmJ_RlicPP6Xi6qc8U0I2Lig2U5m4aOfL8fOCGrOy-f-WqnAZmEkQqzcB8siXqQ3SlYWW4J7nmaPO2BkolxSIcymjFzf5sYZEhzeSh9-QuTdd1Dry5fh6kKbwdWo95iSU9QPu36QHQKJrZ9a9NN6sbITYlwosS6S4FVpMxmm_c6Kl92s_SmfcVo5owH80UOH0wYZ34EpSzKuDjVIFHAIXKHYHvJ5XUwnRpx8-gR_zvBSJM2oWOWXDhKWGA4e2qGr5RKDLtqMTD_2cQPiVKvmO7DgenQU_MbYGPXyL1j78",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8001/api/profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNmY2ZWMwOGQzMTQ0ZWE4ZGM5OWQ0N2FhOWY1Y2I5MzRiOTc3NTBhY2QxYzJmYjNmZTA3ZDljOTAxZWI2NTM3ZGRjOGZjZTg2ZGEwNGVmMGEiLCJpYXQiOjE3MjczMzQ4ODQuNTI2NTQ0LCJuYmYiOjE3MjczMzQ4ODQuNTI2NTU0LCJleHAiOjE3NTg4NzA4ODQuNDc2MjIyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Q7IaP4kRsBEilcGRiAbjcKXTxp_ezAOF6tx3myglP5JmofgZMYoXusGsyW6dAoDa46WllIWwgHHpSHhIl5O1FSwbCMJAN3EyhMKcR3_xfNHc4AO9gAUVd_txnJYDDQXlmnUg7LlEwHNWiyd03_pybkgzG4FbCAvjmeahIpXmZOsLbv6-WDJOTwbtA1WqL1rZ2LwpePekEkEIcsXgHkEszZtRvJro46zh_hHZqY_X5QZ3xrwaH9HnB7D7VCQsTzYUVlR8QlJOPJyt7dL1q4aGOyvGDlko56hV5EVxzEj7fayaQs4T8uAt_ry_Nsrdg30Gmv-69m16jP5gc3jI25apWZpJyaeeMOGw7VnIuCjsTQBNWwn1wAx2mIlFB05X4s6_wgSmJ_RlicPP6Xi6qc8U0I2Lig2U5m4aOfL8fOCGrOy-f-WqnAZmEkQqzcB8siXqQ3SlYWW4J7nmaPO2BkolxSIcymjFzf5sYZEhzeSh9-QuTdd1Dry5fh6kKbwdWo95iSU9QPu36QHQKJrZ9a9NN6sbITYlwosS6S4FVpMxmm_c6Kl92s_SmfcVo5owH80UOH0wYZ34EpSzKuDjVIFHAIXKHYHvJ5XUwnRpx8-gR_zvBSJM2oWOWXDhKWGA4e2qGr5RKDLtqMTD_2cQPiVKvmO7DgenQU_MbYGPXyL1j78",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8001/api/profile",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8002/api/getWeatherReportProtected",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {},
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMTRkZDUxMmUxODgxOTE5ZjNiNGYyZGUzZDM1ODE4M2Y4MmFmYjgxMWIxNzZjNjFkZGNhMDZiNmUwMTcwYzRlNzlmNTg3ODgzMDdlYTllNmQiLCJpYXQiOjE3MjczNTUyNzMuMzQ2MDI5LCJuYmYiOjE3MjczNTUyNzMuMzQ2MDM3LCJleHAiOjE3NTg4OTEyNzMuMjk0OTIxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.fLzXs-UXFMcNeJ7U0Yvj9-SnYlU80yP4Fd7su5cCgEGRsY5UcgS_4btut3T0qtGTznsrKiD6PmpPrLh0np9CVwbL3KpZYL3xX5HtA-BpmhxBbD2bkKxL7g3BBXoYiIMBTJ8BmPY65VOQxibQXrxWBNl_Ptf6MBpgq4aRTKEoeQLb7_dCUcY3BKHdKlhhUgEZZ262gc8G9iY3MSr85MxWlbFKochbq6UI64M5pwN3TcIwCicoEJ4yI5aaE3-oTzZQo8OYoztXtuUsVYCmewFpbv8H-9BmZXqX4kHA489tkYfi0bjDQuHMtX8YOKz3xQHnzFmDaUcbxSRXuOB1xvwZh7l_SSsbSr71IAXhc74hYsPodVECyy53aOkLYcIUB9L5CcfgFZm0mbNJun7kVe6ZtmkgOfUkDcoKf2zf86vthFR7LvyEOBKRTUYe-2FuvMWhBrwpTcmu846uFExqV1dUQOTKlEX38GTmRHDuhmaNOQ5-dHVibXH7FU6am6sS0yzGY6URo1DacgE9MkYRo0wdMYxkcdEpe-rgU7TV6NcZM9o4eEv8LbF5tohwxZO9IPZ820AO6R1dYTJ9ElVBIcIq6zBy61Uab4_uLARCGr7O3YKMk_GMTVZV8Y_CgmnqpK-8Wva8KtbDQqB0SkusJgt7GO1GXSRPtf79_VPMZ1JerqE",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer abc",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMTRkZDUxMmUxODgxOTE5ZjNiNGYyZGUzZDM1ODE4M2Y4MmFmYjgxMWIxNzZjNjFkZGNhMDZiNmUwMTcwYzRlNzlmNTg3ODgzMDdlYTllNmQiLCJpYXQiOjE3MjczNTUyNzMuMzQ2MDI5LCJuYmYiOjE3MjczNTUyNzMuMzQ2MDM3LCJleHAiOjE3NTg4OTEyNzMuMjk0OTIxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.fLzXs-UXFMcNeJ7U0Yvj9-SnYlU80yP4Fd7su5cCgEGRsY5UcgS_4btut3T0qtGTznsrKiD6PmpPrLh0np9CVwbL3KpZYL3xX5HtA-BpmhxBbD2bkKxL7g3BBXoYiIMBTJ8BmPY65VOQxibQXrxWBNl_Ptf6MBpgq4aRTKEoeQLb7_dCUcY3BKHdKlhhUgEZZ262gc8G9iY3MSr85MxWlbFKochbq6UI64M5pwN3TcIwCicoEJ4yI5aaE3-oTzZQo8OYoztXtuUsVYCmewFpbv8H-9BmZXqX4kHA489tkYfi0bjDQuHMtX8YOKz3xQHnzFmDaUcbxSRXuOB1xvwZh7l_SSsbSr71IAXhc74hYsPodVECyy53aOkLYcIUB9L5CcfgFZm0mbNJun7kVe6ZtmkgOfUkDcoKf2zf86vthFR7LvyEOBKRTUYe-2FuvMWhBrwpTcmu846uFExqV1dUQOTKlEX38GTmRHDuhmaNOQ5-dHVibXH7FU6am6sS0yzGY6URo1DacgE9MkYRo0wdMYxkcdEpe-rgU7TV6NcZM9o4eEv8LbF5tohwxZO9IPZ820AO6R1dYTJ9ElVBIcIq6zBy61Uab4_uLARCGr7O3YKMk_GMTVZV8Y_CgmnqpK-8Wva8KtbDQqB0SkusJgt7GO1GXSRPtf79_VPMZ1JerqE",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8001/api/getWeatherReportProtected",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"getWeatherReportProtected"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8001/api/getWeatherReport",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNmY2ZWMwOGQzMTQ0ZWE4ZGM5OWQ0N2FhOWY1Y2I5MzRiOTc3NTBhY2QxYzJmYjNmZTA3ZDljOTAxZWI2NTM3ZGRjOGZjZTg2ZGEwNGVmMGEiLCJpYXQiOjE3MjczMzQ4ODQuNTI2NTQ0LCJuYmYiOjE3MjczMzQ4ODQuNTI2NTU0LCJleHAiOjE3NTg4NzA4ODQuNDc2MjIyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Q7IaP4kRsBEilcGRiAbjcKXTxp_ezAOF6tx3myglP5JmofgZMYoXusGsyW6dAoDa46WllIWwgHHpSHhIl5O1FSwbCMJAN3EyhMKcR3_xfNHc4AO9gAUVd_txnJYDDQXlmnUg7LlEwHNWiyd03_pybkgzG4FbCAvjmeahIpXmZOsLbv6-WDJOTwbtA1WqL1rZ2LwpePekEkEIcsXgHkEszZtRvJro46zh_hHZqY_X5QZ3xrwaH9HnB7D7VCQsTzYUVlR8QlJOPJyt7dL1q4aGOyvGDlko56hV5EVxzEj7fayaQs4T8uAt_ry_Nsrdg30Gmv-69m16jP5gc3jI25apWZpJyaeeMOGw7VnIuCjsTQBNWwn1wAx2mIlFB05X4s6_wgSmJ_RlicPP6Xi6qc8U0I2Lig2U5m4aOfL8fOCGrOy-f-WqnAZmEkQqzcB8siXqQ3SlYWW4J7nmaPO2BkolxSIcymjFzf5sYZEhzeSh9-QuTdd1Dry5fh6kKbwdWo95iSU9QPu36QHQKJrZ9a9NN6sbITYlwosS6S4FVpMxmm_c6Kl92s_SmfcVo5owH80UOH0wYZ34EpSzKuDjVIFHAIXKHYHvJ5XUwnRpx8-gR_zvBSJM2oWOWXDhKWGA4e2qGr5RKDLtqMTD_2cQPiVKvmO7DgenQU_MbYGPXyL1j78",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8001/api/getWeatherReport",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"getWeatherReport"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8001/api/getWeatherReport",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMTRkZDUxMmUxODgxOTE5ZjNiNGYyZGUzZDM1ODE4M2Y4MmFmYjgxMWIxNzZjNjFkZGNhMDZiNmUwMTcwYzRlNzlmNTg3ODgzMDdlYTllNmQiLCJpYXQiOjE3MjczNTUyNzMuMzQ2MDI5LCJuYmYiOjE3MjczNTUyNzMuMzQ2MDM3LCJleHAiOjE3NTg4OTEyNzMuMjk0OTIxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.fLzXs-UXFMcNeJ7U0Yvj9-SnYlU80yP4Fd7su5cCgEGRsY5UcgS_4btut3T0qtGTznsrKiD6PmpPrLh0np9CVwbL3KpZYL3xX5HtA-BpmhxBbD2bkKxL7g3BBXoYiIMBTJ8BmPY65VOQxibQXrxWBNl_Ptf6MBpgq4aRTKEoeQLb7_dCUcY3BKHdKlhhUgEZZ262gc8G9iY3MSr85MxWlbFKochbq6UI64M5pwN3TcIwCicoEJ4yI5aaE3-oTzZQo8OYoztXtuUsVYCmewFpbv8H-9BmZXqX4kHA489tkYfi0bjDQuHMtX8YOKz3xQHnzFmDaUcbxSRXuOB1xvwZh7l_SSsbSr71IAXhc74hYsPodVECyy53aOkLYcIUB9L5CcfgFZm0mbNJun7kVe6ZtmkgOfUkDcoKf2zf86vthFR7LvyEOBKRTUYe-2FuvMWhBrwpTcmu846uFExqV1dUQOTKlEX38GTmRHDuhmaNOQ5-dHVibXH7FU6am6sS0yzGY6URo1DacgE9MkYRo0wdMYxkcdEpe-rgU7TV6NcZM9o4eEv8LbF5tohwxZO9IPZ820AO6R1dYTJ9ElVBIcIq6zBy61Uab4_uLARCGr7O3YKMk_GMTVZV8Y_CgmnqpK-8Wva8KtbDQqB0SkusJgt7GO1GXSRPtf79_VPMZ1JerqE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNmY2ZWMwOGQzMTQ0ZWE4ZGM5OWQ0N2FhOWY1Y2I5MzRiOTc3NTBhY2QxYzJmYjNmZTA3ZDljOTAxZWI2NTM3ZGRjOGZjZTg2ZGEwNGVmMGEiLCJpYXQiOjE3MjczMzQ4ODQuNTI2NTQ0LCJuYmYiOjE3MjczMzQ4ODQuNTI2NTU0LCJleHAiOjE3NTg4NzA4ODQuNDc2MjIyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Q7IaP4kRsBEilcGRiAbjcKXTxp_ezAOF6tx3myglP5JmofgZMYoXusGsyW6dAoDa46WllIWwgHHpSHhIl5O1FSwbCMJAN3EyhMKcR3_xfNHc4AO9gAUVd_txnJYDDQXlmnUg7LlEwHNWiyd03_pybkgzG4FbCAvjmeahIpXmZOsLbv6-WDJOTwbtA1WqL1rZ2LwpePekEkEIcsXgHkEszZtRvJro46zh_hHZqY_X5QZ3xrwaH9HnB7D7VCQsTzYUVlR8QlJOPJyt7dL1q4aGOyvGDlko56hV5EVxzEj7fayaQs4T8uAt_ry_Nsrdg30Gmv-69m16jP5gc3jI25apWZpJyaeeMOGw7VnIuCjsTQBNWwn1wAx2mIlFB05X4s6_wgSmJ_RlicPP6Xi6qc8U0I2Lig2U5m4aOfL8fOCGrOy-f-WqnAZmEkQqzcB8siXqQ3SlYWW4J7nmaPO2BkolxSIcymjFzf5sYZEhzeSh9-QuTdd1Dry5fh6kKbwdWo95iSU9QPu36QHQKJrZ9a9NN6sbITYlwosS6S4FVpMxmm_c6Kl92s_SmfcVo5owH80UOH0wYZ34EpSzKuDjVIFHAIXKHYHvJ5XUwnRpx8-gR_zvBSJM2oWOWXDhKWGA4e2qGr5RKDLtqMTD_2cQPiVKvmO7DgenQU_MbYGPXyL1j78",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8001/api/oauth_verify",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"oauth_verify"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8001/api/oauth_verify",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMTRkZDUxMmUxODgxOTE5ZjNiNGYyZGUzZDM1ODE4M2Y4MmFmYjgxMWIxNzZjNjFkZGNhMDZiNmUwMTcwYzRlNzlmNTg3ODgzMDdlYTllNmQiLCJpYXQiOjE3MjczNTUyNzMuMzQ2MDI5LCJuYmYiOjE3MjczNTUyNzMuMzQ2MDM3LCJleHAiOjE3NTg4OTEyNzMuMjk0OTIxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.fLzXs-UXFMcNeJ7U0Yvj9-SnYlU80yP4Fd7su5cCgEGRsY5UcgS_4btut3T0qtGTznsrKiD6PmpPrLh0np9CVwbL3KpZYL3xX5HtA-BpmhxBbD2bkKxL7g3BBXoYiIMBTJ8BmPY65VOQxibQXrxWBNl_Ptf6MBpgq4aRTKEoeQLb7_dCUcY3BKHdKlhhUgEZZ262gc8G9iY3MSr85MxWlbFKochbq6UI64M5pwN3TcIwCicoEJ4yI5aaE3-oTzZQo8OYoztXtuUsVYCmewFpbv8H-9BmZXqX4kHA489tkYfi0bjDQuHMtX8YOKz3xQHnzFmDaUcbxSRXuOB1xvwZh7l_SSsbSr71IAXhc74hYsPodVECyy53aOkLYcIUB9L5CcfgFZm0mbNJun7kVe6ZtmkgOfUkDcoKf2zf86vthFR7LvyEOBKRTUYe-2FuvMWhBrwpTcmu846uFExqV1dUQOTKlEX38GTmRHDuhmaNOQ5-dHVibXH7FU6am6sS0yzGY6URo1DacgE9MkYRo0wdMYxkcdEpe-rgU7TV6NcZM9o4eEv8LbF5tohwxZO9IPZ820AO6R1dYTJ9ElVBIcIq6zBy61Uab4_uLARCGr7O3YKMk_GMTVZV8Y_CgmnqpK-8Wva8KtbDQqB0SkusJgt7GO1GXSRPtf79_VPMZ1JerqE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNmY2ZWMwOGQzMTQ0ZWE4ZGM5OWQ0N2FhOWY1Y2I5MzRiOTc3NTBhY2QxYzJmYjNmZTA3ZDljOTAxZWI2NTM3ZGRjOGZjZTg2ZGEwNGVmMGEiLCJpYXQiOjE3MjczMzQ4ODQuNTI2NTQ0LCJuYmYiOjE3MjczMzQ4ODQuNTI2NTU0LCJleHAiOjE3NTg4NzA4ODQuNDc2MjIyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.Q7IaP4kRsBEilcGRiAbjcKXTxp_ezAOF6tx3myglP5JmofgZMYoXusGsyW6dAoDa46WllIWwgHHpSHhIl5O1FSwbCMJAN3EyhMKcR3_xfNHc4AO9gAUVd_txnJYDDQXlmnUg7LlEwHNWiyd03_pybkgzG4FbCAvjmeahIpXmZOsLbv6-WDJOTwbtA1WqL1rZ2LwpePekEkEIcsXgHkEszZtRvJro46zh_hHZqY_X5QZ3xrwaH9HnB7D7VCQsTzYUVlR8QlJOPJyt7dL1q4aGOyvGDlko56hV5EVxzEj7fayaQs4T8uAt_ry_Nsrdg30Gmv-69m16jP5gc3jI25apWZpJyaeeMOGw7VnIuCjsTQBNWwn1wAx2mIlFB05X4s6_wgSmJ_RlicPP6Xi6qc8U0I2Lig2U5m4aOfL8fOCGrOy-f-WqnAZmEkQqzcB8siXqQ3SlYWW4J7nmaPO2BkolxSIcymjFzf5sYZEhzeSh9-QuTdd1Dry5fh6kKbwdWo95iSU9QPu36QHQKJrZ9a9NN6sbITYlwosS6S4FVpMxmm_c6Kl92s_SmfcVo5owH80UOH0wYZ34EpSzKuDjVIFHAIXKHYHvJ5XUwnRpx8-gR_zvBSJM2oWOWXDhKWGA4e2qGr5RKDLtqMTD_2cQPiVKvmO7DgenQU_MbYGPXyL1j78",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8001/api/oauth_verify",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"oauth_verify"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8001/api/getWeatherReportProtected",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {},
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMTRkZDUxMmUxODgxOTE5ZjNiNGYyZGUzZDM1ODE4M2Y4MmFmYjgxMWIxNzZjNjFkZGNhMDZiNmUwMTcwYzRlNzlmNTg3ODgzMDdlYTllNmQiLCJpYXQiOjE3MjczNTUyNzMuMzQ2MDI5LCJuYmYiOjE3MjczNTUyNzMuMzQ2MDM3LCJleHAiOjE3NTg4OTEyNzMuMjk0OTIxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.fLzXs-UXFMcNeJ7U0Yvj9-SnYlU80yP4Fd7su5cCgEGRsY5UcgS_4btut3T0qtGTznsrKiD6PmpPrLh0np9CVwbL3KpZYL3xX5HtA-BpmhxBbD2bkKxL7g3BBXoYiIMBTJ8BmPY65VOQxibQXrxWBNl_Ptf6MBpgq4aRTKEoeQLb7_dCUcY3BKHdKlhhUgEZZ262gc8G9iY3MSr85MxWlbFKochbq6UI64M5pwN3TcIwCicoEJ4yI5aaE3-oTzZQo8OYoztXtuUsVYCmewFpbv8H-9BmZXqX4kHA489tkYfi0bjDQuHMtX8YOKz3xQHnzFmDaUcbxSRXuOB1xvwZh7l_SSsbSr71IAXhc74hYsPodVECyy53aOkLYcIUB9L5CcfgFZm0mbNJun7kVe6ZtmkgOfUkDcoKf2zf86vthFR7LvyEOBKRTUYe-2FuvMWhBrwpTcmu846uFExqV1dUQOTKlEX38GTmRHDuhmaNOQ5-dHVibXH7FU6am6sS0yzGY6URo1DacgE9MkYRo0wdMYxkcdEpe-rgU7TV6NcZM9o4eEv8LbF5tohwxZO9IPZ820AO6R1dYTJ9ElVBIcIq6zBy61Uab4_uLARCGr7O3YKMk_GMTVZV8Y_CgmnqpK-8Wva8KtbDQqB0SkusJgt7GO1GXSRPtf79_VPMZ1JerqE",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer abc",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMTRkZDUxMmUxODgxOTE5ZjNiNGYyZGUzZDM1ODE4M2Y4MmFmYjgxMWIxNzZjNjFkZGNhMDZiNmUwMTcwYzRlNzlmNTg3ODgzMDdlYTllNmQiLCJpYXQiOjE3MjczNTUyNzMuMzQ2MDI5LCJuYmYiOjE3MjczNTUyNzMuMzQ2MDM3LCJleHAiOjE3NTg4OTEyNzMuMjk0OTIxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.fLzXs-UXFMcNeJ7U0Yvj9-SnYlU80yP4Fd7su5cCgEGRsY5UcgS_4btut3T0qtGTznsrKiD6PmpPrLh0np9CVwbL3KpZYL3xX5HtA-BpmhxBbD2bkKxL7g3BBXoYiIMBTJ8BmPY65VOQxibQXrxWBNl_Ptf6MBpgq4aRTKEoeQLb7_dCUcY3BKHdKlhhUgEZZ262gc8G9iY3MSr85MxWlbFKochbq6UI64M5pwN3TcIwCicoEJ4yI5aaE3-oTzZQo8OYoztXtuUsVYCmewFpbv8H-9BmZXqX4kHA489tkYfi0bjDQuHMtX8YOKz3xQHnzFmDaUcbxSRXuOB1xvwZh7l_SSsbSr71IAXhc74hYsPodVECyy53aOkLYcIUB9L5CcfgFZm0mbNJun7kVe6ZtmkgOfUkDcoKf2zf86vthFR7LvyEOBKRTUYe-2FuvMWhBrwpTcmu846uFExqV1dUQOTKlEX38GTmRHDuhmaNOQ5-dHVibXH7FU6am6sS0yzGY6URo1DacgE9MkYRo0wdMYxkcdEpe-rgU7TV6NcZM9o4eEv8LbF5tohwxZO9IPZ820AO6R1dYTJ9ElVBIcIq6zBy61Uab4_uLARCGr7O3YKMk_GMTVZV8Y_CgmnqpK-8Wva8KtbDQqB0SkusJgt7GO1GXSRPtf79_VPMZ1JerqE",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8001/api/getWeatherReportProtected",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"getWeatherReportProtected"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8001/api/user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMTRkZDUxMmUxODgxOTE5ZjNiNGYyZGUzZDM1ODE4M2Y4MmFmYjgxMWIxNzZjNjFkZGNhMDZiNmUwMTcwYzRlNzlmNTg3ODgzMDdlYTllNmQiLCJpYXQiOjE3MjczNTUyNzMuMzQ2MDI5LCJuYmYiOjE3MjczNTUyNzMuMzQ2MDM3LCJleHAiOjE3NTg4OTEyNzMuMjk0OTIxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.fLzXs-UXFMcNeJ7U0Yvj9-SnYlU80yP4Fd7su5cCgEGRsY5UcgS_4btut3T0qtGTznsrKiD6PmpPrLh0np9CVwbL3KpZYL3xX5HtA-BpmhxBbD2bkKxL7g3BBXoYiIMBTJ8BmPY65VOQxibQXrxWBNl_Ptf6MBpgq4aRTKEoeQLb7_dCUcY3BKHdKlhhUgEZZ262gc8G9iY3MSr85MxWlbFKochbq6UI64M5pwN3TcIwCicoEJ4yI5aaE3-oTzZQo8OYoztXtuUsVYCmewFpbv8H-9BmZXqX4kHA489tkYfi0bjDQuHMtX8YOKz3xQHnzFmDaUcbxSRXuOB1xvwZh7l_SSsbSr71IAXhc74hYsPodVECyy53aOkLYcIUB9L5CcfgFZm0mbNJun7kVe6ZtmkgOfUkDcoKf2zf86vthFR7LvyEOBKRTUYe-2FuvMWhBrwpTcmu846uFExqV1dUQOTKlEX38GTmRHDuhmaNOQ5-dHVibXH7FU6am6sS0yzGY6URo1DacgE9MkYRo0wdMYxkcdEpe-rgU7TV6NcZM9o4eEv8LbF5tohwxZO9IPZ820AO6R1dYTJ9ElVBIcIq6zBy61Uab4_uLARCGr7O3YKMk_GMTVZV8Y_CgmnqpK-8Wva8KtbDQqB0SkusJgt7GO1GXSRPtf79_VPMZ1JerqE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8001/api/user",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8001",
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
